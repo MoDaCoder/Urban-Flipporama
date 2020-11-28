@@ -67,4 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/snail.png'
         }
     ]
+
+const grid = document.querySelector('.grid')
+//creating board
+//using for loop to iterate through card array and adding an img element to it
+function createBoard() {
+  for (let i = 0; i < cardArray.length; i++) {
+      var card = document.createElement('img')
+      card.setAttribute('src', 'images/pikachu.png')
+      card.setAttribute('data-id', i)
+    //   card.addEventListener('click', flipcard)
+    grid.appendChild(card)
+  }
+}
+createBoard()
+
 })
